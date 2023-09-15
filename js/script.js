@@ -7,17 +7,19 @@ stampare la lista della spesa sul html con un ciclo while.
 
 const lista = ['mele', 'pere', 'melanzane', 'latte', 'sugo', 'pasta'];
 
+const listaEl = document.getElementById('list');
+
 let i = 0;
 
-
 while (i < lista.length) {
-  console.log(lista[i])
-  i++;
+  const item = lista[i];
   
+  listaEl.innerHTML = <li>${item}</li>
+  
+  // document.getElementById('list').innerHTML = lista;
 }
 
 
-  document.getElementById('list').innerHTML = lista + ' ' + i;
 
 
 
